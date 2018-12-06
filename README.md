@@ -8,6 +8,15 @@
 
 - [리액트 기초 웹 서비스 만들기 React JS Fundamentals - 노마드 코더 Nomad Coders](https://www.youtube.com/playlist?list=PL7jH19IHhOLOFTVD4R8FeZWkwpVi8-9Fv)
 
+## 목차
+
+- [101 내용은 나중에 정리](#101-내용은-나중에-정리)
+- [Loading State](#Loading-State)
+- [Smart vs Dumb Componenets](#Smart-vs-Dumb-Componenets)
+  - [Smart/Dumb Component 구현 코드](#smartdumb-component-구현-코드)
+    - [Smart Component 구현 코드](#smart-component-구현-코드)
+    - [Dumb Component (stateless functional component) 구현 코드](#dumb-component-stateless-functional-component-구현-코드)
+
 ## 101 내용은 나중에 정리
 
 ## Loading State
@@ -112,7 +121,7 @@ render() {
 
 ## Smart vs Dumb Componenets
 
-모든 컴포넌트가 state를 갖는 것은 아니다. 어떤 컴포넌트는 state를 갖지 않는데 이런 컴포넌트는 **stateless functional component(Dumb Component)**로 대체할 수 있다.<br>
+모든 컴포넌트가 state를 갖는 것은 아니다. 어떤 컴포넌트는 state를 갖지 않는데 이런 컴포넌트는 **stateless functional component(Dumb Component)로 대체**할 수 있다.<br>
 이 두 종류의 컴포넌트에는 확연한 차이가 있다.
 
 | .               | Component (Smart Component)       | Stateless functional component (Dumb Component)         |
@@ -123,7 +132,11 @@ render() {
 | 구현 방법       | React.Component를 확장하는 클래스 | props를 받아 element를 반환하는 function                |
 | Life Cycle      | 존재                              | 존재 X (변화할 state가 없기 때문에 생명주기또한 필요 X) |
 
-### Smart Component 구현 코드
+### Smart/Dumb Component 구현 코드
+
+**_Movie 컴포넌트 또한 변환이 가능하지만, 차이를 한눈에 보기 위해 변환하지 않았다._** <br>
+
+#### Smart Component 구현 코드
 
 ```js
 import React, { Component } from "react";
@@ -168,7 +181,7 @@ class MoviePoster extends Component {
 export default Movie;
 ```
 
-### Dumb Component (stateless functional component) 구현 코드
+#### Dumb Component (stateless functional component) 구현 코드
 
 ```js
 import React, { Component } from "react";
@@ -213,4 +226,3 @@ export default Movie;
 ```
 
 <br>
-**Movie 컴포넌트 또한 변환이 가능하지만, 차이를 한눈에 보기 위해 변환하지 않는다.** <br>
