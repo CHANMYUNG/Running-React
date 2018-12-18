@@ -39,7 +39,7 @@ class App extends Component {
 
   _renderMovies() {
     return this.state.movies.map((movie, index) => {
-      return <Movie title={movie.title} poster={movie.poster} key={index} />
+      return <Movie {...movie} key={index} />
     })
   }
 
