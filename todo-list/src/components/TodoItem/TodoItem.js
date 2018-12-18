@@ -21,6 +21,10 @@ class TodoItem extends Component {
       </div>
     );
   }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    return this.props.done !== nextProps.done;
+  }
 }
 
 export default TodoItem;
